@@ -2,22 +2,19 @@
 
 int main() {
     int x, y, z;
-    int *px = &x;
-    int *py = &y;
-    int *pz = &z;
-
-    printf("정수 3개 입력: ");
-    scanf("%d %d %d", px, py, pz);
+    int *xp = &x;
+    int *yp = &y;
+    int *zp = &z;
 
     int *tmp;
-    int tempVal;
+    int tmpval;
 
-    tmp = px;
-    tempVal = *pz;
+    tmp = xp;
+    tmpval = *xp;
 
-    *pz = *py;
-    *py = *px;
-    *tmp = tempVal;
+    *xp = *yp;
+    *yp = *zp;
+    *tmp = tmpval;
 
     printf("이동 후 값: x = %d, y = %d, z = %d\n", x, y, z);
 
